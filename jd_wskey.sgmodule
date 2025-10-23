@@ -1,12 +1,11 @@
 #!name=京东wskey上传TG
-#!desc=京东wskey上传(点消息)更新时间2025-10-24
+#!desc=京东pt_key和wskey上传(低版本app点消息)更新时间2025-10-24
 #!system=ios
-
+#!author=合并版
 [Script]
-京东上传wskey = type=http-request,pattern=^https:\/\/blackhole\.m\.jd\.com\/bypass,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/15974296618/my_scripts/main/wskey.js,script-update-interval=0
-
+# pt_key上传脚本
+京东pt_key上传 = type=http-request,pattern=^https:\/\/mars\.jd\.com\/log\/sdk\/v2,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/jdzjy/Surge/refs/heads/main/jd_ck.js,script-update-interval=0
+# wskey上传脚本  
+京东wskey上传 = type=http-request,pattern=^https:\/\/blackhole\.m\.jd\.com\/bypass,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/15974296618/my_scripts/main/wskey.js,script-update-interval=0
 [MITM]
-hostname = %APPEND%  blackhole.m.jd.com
-
-
-
+hostname = %APPEND% mars.jd.com, blackhole.m.jd.com
